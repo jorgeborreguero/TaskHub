@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  taskhub-api:
+    image: taskhub-api:latest
+    build:
+      context: ./TaskHub.Api
+      dockerfile: Dockerfile
+    ports:
+      - "5050:5050"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - mongodb
+
+  taskhub-frontend:
+    image: taskhub-frontend:latest
+    build:
+      context: ./TaskHub.Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    environment:
+      - NODE_ENV=production
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

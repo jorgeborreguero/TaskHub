@@ -1,0 +1,36 @@
+
+# .NET
+TaskHub.Api/bin/
+TaskHub.Api/obj/
+TaskHub.Api/*.user
+TaskHub.Api/*.suo
+TaskHub.Api/*.vspscc
+TaskHub.Api/*.vssscc
+TaskHub.Api/.vs/
+TaskHub.Api/.vscode/
+TaskHub.Api/TestResults/
+TaskHub.Api/packages/
+TaskHub.Api/.DS_Store
+
+# Node.js / React
+TaskHub.Frontend/node_modules/
+TaskHub.Frontend/dist/
+TaskHub.Frontend/.env
+TaskHub.Frontend/.DS_Store
+TaskHub.Frontend/.vscode/
+TaskHub.Frontend/.cache/
+TaskHub.Frontend/.next/
+TaskHub.Frontend/.turbo/
+TaskHub.Frontend/.eslintcache
+TaskHub.Frontend/coverage/
+TaskHub.Frontend/yarn-error.log
+TaskHub.Frontend/npm-debug.log*
+
+# General
+.env
+*.log
+.DS_Store
+.vscode/
+coverage/
+node_modules/
+dist/
